@@ -1,5 +1,8 @@
 # LIHN WordPress 自动部署工具
 
+一键安装命令：
+apt-get update && apt-get install -y git && git clone https://github.com/libin8089/lihn-wordpress-deploy.git && cd lihn-wordpress-deploy && chmod 700 install.sh && bash install.sh
+
 用于在 Ubuntu 24.04 LTS 服务器上部署 WordPress 毛坯网站。
 
 ## 一、项目功能
@@ -36,7 +39,7 @@
 
 注意：如果服务器已经运行网站或 Web 服务，不要直接运行安装脚本。
 
-## 四、获取部署脚本
+## 四、获取部署脚本（脚本解释）
 
 以 root 用户登录服务器。
 
