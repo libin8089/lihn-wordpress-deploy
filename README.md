@@ -4,6 +4,10 @@
 
 apt-get update && apt-get install -y git && git clone https://github.com/libin8089/lihn-wordpress-deploy.git && cd lihn-wordpress-deploy && chmod 700 install.sh && bash install.sh
 
+WordPress安装完成后进入管理后台地址：https://你的域名/wp-admin
+
+
+
 用于在 Ubuntu 24.04 LTS 服务器上部署 WordPress 毛坯网站。
 
 ## 一、项目功能
