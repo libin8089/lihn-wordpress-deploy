@@ -10,6 +10,26 @@ WordPress安装完成后进入管理后台地址：https://你的域名/wp-admin
 
 cat /root/wordpress-install-info.txt
 
+本脚本为单域名部署，双域名则搭建完成后另外在配置双域名共同指向，和申请双域名证书：如准备好解析好IP的域名：www.lihn.com ;lihn.com
+
+执行命令（把下面lihn替换成你的域名）：
+sed -i 's/server_name www\.lihn\.com;/server_name lihn.com www.lihn.com;/g' /etc/nginx/sites-available/www.lihnz.com
+
+让 Nginx 重新加载配置命令：
+
+systemctl reload nginx
+
+再执行命令（将现有证书扩展为同时覆盖）：
+
+certbot --nginx \
+  --cert-name www.lihn.com \
+  -d lihnz.com \
+  -d www.lihnz.com \
+  --expand
+
+  配置完成，验证双域名，两个网址应该都能打开同一个 WordPress 网站
+
+  
 =====================================================================================================================================================================================
 
 用于在 Ubuntu 24.04 LTS 服务器上部署 WordPress 毛坯网站。
