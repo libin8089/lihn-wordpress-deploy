@@ -6,7 +6,11 @@ apt-get update && apt-get install -y git && git clone https://github.com/libin80
 
 WordPress安装完成后进入管理后台地址：https://你的域名/wp-admin
 
+查询后台管理员密码及数据库信息：
 
+cat /root/wordpress-install-info.txt
+
+=====================================================================================================================================================================================
 
 用于在 Ubuntu 24.04 LTS 服务器上部署 WordPress 毛坯网站。
 
