@@ -16,7 +16,7 @@ cat /root/wordpress-install-info.txt
 
 执行命令（把下面lihn替换成你的域名）：
 
-sed -i 's/server_name www\.lihn\.com;/server_name lihn.com www.lihn.com;/g' /etc/nginx/sites-available/www.lihn.com
+sed -i 's/server_name www.lihn.com;/server_name lihn.com www.lihn.com;/g ' /etc/nginx/sites-available/www.lihn.com
 
 让 Nginx 重新加载配置命令：
 
